@@ -16,8 +16,6 @@ def dividir(num1: float, num2: float = 1) -> float:
     """
     
     # Inicializar a None para no retornar un número si se produjo un error
-    resultado = None
-
     resultado = num1 / num2
     
     resultado = round(resultado, 2)
@@ -56,6 +54,8 @@ def main():
 
         # Para continuar comprobamos que se retornó un número en el divisor
         if divisor != None:
+
+            resultado = None
             # Capturo la excepción fuera del método para comprobar la excepción en el test
             try:
                 resultado = dividir(dividendo, divisor)
