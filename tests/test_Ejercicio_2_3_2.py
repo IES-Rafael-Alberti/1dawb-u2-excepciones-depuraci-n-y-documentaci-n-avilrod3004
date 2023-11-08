@@ -14,6 +14,6 @@ from src.Ejercicio_2_3_2 import serieImpares
 def test_serieImpares_params(input_x, expected):
     assert serieImpares(input_x) == expected
 
-def test_dividir_ValueError():
+def test_serieImpares_ValueError():
     with pytest.raises(ValueError):
         serieImpares(-5)
