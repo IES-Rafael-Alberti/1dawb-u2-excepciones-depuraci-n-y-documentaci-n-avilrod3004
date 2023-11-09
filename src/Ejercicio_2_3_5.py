@@ -4,6 +4,10 @@ Escribir que solicite una contraseña, y si no coincide con la que se tiene, lan
 
 def pedirPasswd() -> str:
     '''
+    Pide una cadena de texto por consola
+
+    Return:
+        str: cadena de texto introducida por el usuario
     '''
     passwd = input('Introduce la contraseña: ')
 
@@ -12,6 +16,13 @@ def pedirPasswd() -> str:
 
 def comprobarPasswd(passwd: str) -> bool:
     '''
+    Comprueba si la contraseña guardad es igual que la introducida por el usuario
+
+    Args:
+        passwd (str): contraseña dada por el usuario
+
+    Return:
+        bool: True si coincide
     '''
     passwdOriginal = 'contraseña'
 
@@ -24,6 +35,8 @@ def comprobarPasswd(passwd: str) -> bool:
 def main():
     passwd = pedirPasswd()
 
+    # comprueba si la contraseña introducida por el usuario coincide con la original
+    # en caso de que sean diferentes lanza una excepción
     try:
         comprobarPasswd(passwd)
     except NameError as e:
